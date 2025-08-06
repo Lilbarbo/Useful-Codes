@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerMoviment : MonoBehaviour
 {
     [Header("Animators References")]
     [SerializeField] Animator animatorMao;
@@ -173,3 +173,4 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
     }
 }
+
