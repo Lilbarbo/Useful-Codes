@@ -1,4 +1,8 @@
 using UnityEngine;
+//<<summary>>
+//Script que aplica o efeito de billboard ao objeto, fazendo com que este sempre fique se aparentando 'plano' em relação a camera
+//Recomendado o uso para elementos de UI
+//<<summary>>
 
 public class Billboard : MonoBehaviour
 {
@@ -37,3 +41,4 @@ public class Billboard : MonoBehaviour
         }
     }
 }
+
