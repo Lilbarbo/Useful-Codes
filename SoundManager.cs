@@ -1,6 +1,11 @@
 using UnityEngine;
 using System;
 
+//<<summary>>
+//Um gerenciador de sons, esse script permite criar categorias de AudioClips e tocar algum desses clips, de uma determinada categoria, aleatóriamente
+//<<summary>>
+
+
 public enum SoundType
 {
     HIRAISHIN,
@@ -58,3 +63,4 @@ public struct SoundList
     [HideInInspector] public string name;
     [SerializeField] private AudioClip[] sounds;
 }
+
