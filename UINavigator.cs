@@ -19,14 +19,14 @@ public class UINavigator : MonoBehaviour
 
     private void Update()
     {
-        GameObject currentSelectable = eventSystem.currentSelectedGameObject;
-        Selectable selectable = currentSelectable.GetComponent<Selectable>();
+        GameObject currentSelectable = eventSystem.currentSelectedGameObject; //pega o GameObject que está sendo selecionado atualmente
+        Selectable selectable = currentSelectable.GetComponent<Selectable>(); //pega o selecionável dentro desse objeto
 
         if(selectable != null)
         {
             if (Input.GetKeyDown(KeyCode.Tab) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
-                Selectable previousSelectable = selectable.FindSelectableOnUp();
+                Selectable previousSelectable = selectable.FindSelectableOnUp(); //verifica se há um selecionável acima
                 if (previousSelectable != null)
                 {
                     previousSelectable.Select();
@@ -35,17 +35,18 @@ public class UINavigator : MonoBehaviour
 
             else if (Input.GetKeyDown(KeyCode.Tab))
             {
-                Selectable nextSelectable = selectable.FindSelectableOnDown();
+                Selectable nextSelectable = selectable.FindSelectableOnDown(); //verifica se há um selecionável abaixo
                 if (nextSelectable != null)
                 {
                     nextSelectable.Select();
                 }
                 else
                 {
-                    firstInputToSelect.Select();
+                    firstInputToSelect.Select(); //caso não, retorna ao primeiro selecionável
                 }
             }
         }
     }
 }
+
 
