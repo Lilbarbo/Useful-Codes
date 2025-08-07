@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MenuNavigator : MonoBehaviour
+public class UINavigator : MonoBehaviour
 {
 
     [SerializeField] private Selectable firstInputToSelect;
@@ -48,3 +48,4 @@ public class MenuNavigator : MonoBehaviour
         }
     }
 }
+
