@@ -4,6 +4,8 @@ using System.Numerics;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
+//summaty<>
+
 public class Enemy_Moviment : MonoBehaviour
 {
     [SerializeField] private List<Vector2> patrolPositions;
@@ -137,3 +139,4 @@ public class Enemy_Moviment : MonoBehaviour
         return false;
     }
 }
+
