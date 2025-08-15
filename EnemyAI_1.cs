@@ -4,7 +4,16 @@ using System.Numerics;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
-//summaty<>
+//<<summary>>
+//Esse script permite que uma determinada IA tenha os seguintes comportamentos:
+//Patrulhe uma lista de posições, caso não tenha ninguém perto dele e esteja com a vida cheia;
+//Caso tenha um inimigo, vá na direção dele;
+//Caso esteja perto o bastante, ataque;
+//Caso esteja com vida baixa, fuja do inimigo;
+//Caso esteja com a vida não cheia e não tenha um inimigo por perto, volte para a origem
+//Caso esteja na origem e não esteja com a vida cheia, recupere um pouco de vida por segundo.
+//<<summary>>
+
 
 public class Enemy_Moviment : MonoBehaviour
 {
@@ -139,4 +148,5 @@ public class Enemy_Moviment : MonoBehaviour
         return false;
     }
 }
+
 
