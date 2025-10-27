@@ -1,0 +1,22 @@
+private void RaycastFromCamera()
+{
+  Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+  RaycastHit hit;
+  if(Physics.Raycast(ray, out hit, maxDistance, LayerMask))
+  {
+   //Ação que acontecerá quando o raio acertar a layer
+  }
+}
+
+private void RaycastFromTheCenterOfScreen()
+{
+ Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f,0));
+ RaycastHit hit;
+ 
+ if(Physics.Raycast(ray, out hit, maxDistance, LayerMask))
+  {
+      //Ação que acontecerá quando o raio acertar a layer
+  }
+
+ Debug.DrawRay(ray.origin, ray.direction * distance, Color.color)
+}
